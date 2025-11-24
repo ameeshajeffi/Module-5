@@ -1,36 +1,40 @@
-# Hierarchical Inheritance in Python
-
-This Python project demonstrates **Hierarchical Inheritance** using a base class `Details` and two derived classes `Employee` and `Patient`. The program collects and displays details for both employees and patients.
+# NumPy Program: Replace the Second Column in a 2D Array
 
 ## 🎯 Aim
-
-To write a Python program that uses **Hierarchical Inheritance** to input and display **Employee** and **Patient** details.
-
-## 📘 Description
-
-- **Base Class:** `Details`
-  - Stores common attributes: `name`, `age`
-  - Provides methods: `getName()`, `getAge()`
-
-- **Derived Class 1:** `Employee`
-  - Inherits from `Details`
-  - Adds: `employee_id`, `department`
-  - Method: `getEmployeeDetails()`
-
-- **Derived Class 2:** `Patient`
-  - Inherits from `Details`
-  - Adds: `patient_id`, `disease`
-  - Method: `getPatientDetails()`
+To write a **NumPy** program that deletes the second column from a given 2D array and inserts a new column at the same position.
 
 ## 🧠 Algorithm
+1. **Import NumPy**: Start by importing the NumPy library.
+2. **Get Input**: Get a 2D NumPy array and a new column (as another array) from the user.
+3. **Delete Column**: Use `np.delete()` to remove the second column (index 1) from the original array.
+4. **Insert Column**: Use `np.insert()` to insert the new column at the second column's original position.
+5. **Display Result**: Print the updated array with the replaced column.
 
-1. Create base class `Details` with common attributes.
-2. Create `Employee` class extending `Details`, adding employee-specific data.
-3. Create `Patient` class extending `Details`, adding patient-specific data.
-4. Get user input for employee and patient data.
-5. Display collected information using class methods.
+## 🧾 Program
+```
+import numpy as np
+orig=np.array(eval(input()))
+new=np.array(eval(input()))
+print("Printing Original array")
+print(orig)
+modif=np.delete(orig,1,axis=1)
+print("Array after deleting column 2 on axis 1")
+print(modif)
+result=np.insert(modif,1,new,axis=1)
+print("Array after inserting column 2 on axis 1")
+print(result)
+```
 
-## Program
-Add code here
-## Sample Output
+
+
+
+## Output
+
+![image](https://github.com/user-attachments/assets/3ba68705-a0b3-471c-882f-6dfd6588f04a)
+
+
+## Result
+
+Thus,the program has been executed successfully.
+
 
